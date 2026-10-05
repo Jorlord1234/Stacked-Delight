@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stacked_delight:burger_bun"
+    },
+    {
+      "item": "stacked_delight:burger_bun"
+    },
+    {
+      "item": "farmersdelight:beef_patty"
+    },
+    {
+      "item": "farmersdelight:beef_patty"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon"
+    }
+  ],
+  "result": {
+    "id": "stacked_delight:bacon_double_burger",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stacked_delight:triple_burger"
+    },
+    {
+      "item": "stacked_delight:large_fries"
+    },
+    {
+      "item": "stacked_delight:chicken_nuggets_20"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "item": "stacked_delight:chocolate_milkshake"
+        },
+        {
+          "item": "stacked_delight:sweet_berry_milkshake"
+        }
+      ]
+    }
+  ],
+  "result": {
+    "id": "stacked_delight:combo_meal",
+    "count": 1
+  }
+}

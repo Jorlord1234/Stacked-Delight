@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": {
+    "item": "create:dough"
+  },
+  "result": {
+    "id": "stacked_delight:burger_bun"
+  },
+  "experience": 0.35,
+  "cookingtime": 600
+}

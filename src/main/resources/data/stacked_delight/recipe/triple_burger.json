@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["H", "H", "H"],
+  "key": { "H": { "item": "farmersdelight:hamburger" } },
+  "result": { "id": "stacked_delight:triple_burger", "count": 1 }
+}
