@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stacked_delight:burger_bun"
+    },
+    {
+      "item": "stacked_delight:sausage"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    }
+  ],
+  "result": {
+    "id": "stacked_delight:hot_dog",
+    "count": 1
+  }
+}

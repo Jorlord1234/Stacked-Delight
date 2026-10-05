@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": {
+    "item": "stacked_delight:raw_sausage"
+  },
+  "result": {
+    "id": "stacked_delight:sausage"
+  },
+  "experience": 0.35,
+  "cookingtime": 600
+}

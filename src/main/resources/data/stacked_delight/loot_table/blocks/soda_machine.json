@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "stacked_delight:soda_machine"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "stacked_delight:blocks/soda_machine"
+}

@@ -2,6 +2,7 @@ package dev.stackeddelight;
 
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
@@ -74,4 +75,50 @@ public class ModItems {
     // ---- Burger bun: baked from Create's dough, used in the burgers ----
     public static final DeferredItem<Item> BURGER_BUN = ITEMS.registerSimpleItem("burger_bun",
             new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.5F).build()));
+
+    // ---- Hot dog ----
+    public static final DeferredItem<Item> RAW_SAUSAGE = ITEMS.registerSimpleItem("raw_sausage",
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.2F).build()));
+    public static final DeferredItem<Item> SAUSAGE = ITEMS.registerSimpleItem("sausage",
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationModifier(0.7F).build()));
+    public static final DeferredItem<FoodItem> HOT_DOG = ITEMS.registerItem("hot_dog",
+            props -> new FoodItem(props).fd("nourishment", 2400),
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(11).saturationModifier(0.7F).build()).stacksTo(16));
+
+    // ---- Ice cream (made in the Ice Cream Machine) ----
+    public static final DeferredItem<Item> WAFER_CONE = ITEMS.registerSimpleItem("wafer_cone",
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.3F).build()));
+    public static final DeferredItem<FoodItem> VANILLA_CONE = ITEMS.registerItem("vanilla_cone",
+            props -> new FoodItem(props).fd("comfort", 1200),
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationModifier(0.4F).build()).stacksTo(16));
+    public static final DeferredItem<FoodItem> CHOCOLATE_CONE = ITEMS.registerItem("chocolate_cone",
+            props -> new FoodItem(props).fd("comfort", 1200),
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationModifier(0.4F).build()).stacksTo(16));
+    public static final DeferredItem<FoodItem> STRAWBERRY_CONE = ITEMS.registerItem("strawberry_cone",
+            props -> new FoodItem(props).fd("comfort", 1200),
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationModifier(0.4F).build()).stacksTo(16));
+
+    // ---- Soda (made in the Soda Machine); you keep the empty cup ----
+    public static final DeferredItem<Item> SODA_CUP = ITEMS.registerSimpleItem("soda_cup");
+    public static final DeferredItem<FoodItem> COLA = ITEMS.registerItem("cola",
+            props -> new FoodItem(props).drink().leftoverLazy(() -> ModItems.SODA_CUP.get()).effect(MobEffects.MOVEMENT_SPEED, 600, 0),
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.2F).alwaysEdible().build()).stacksTo(16));
+    public static final DeferredItem<FoodItem> APPLE_SODA = ITEMS.registerItem("apple_soda",
+            props -> new FoodItem(props).drink().leftoverLazy(() -> ModItems.SODA_CUP.get()).effect(MobEffects.JUMP, 600, 0),
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.2F).alwaysEdible().build()).stacksTo(16));
+    public static final DeferredItem<FoodItem> MELON_SODA = ITEMS.registerItem("melon_soda",
+            props -> new FoodItem(props).drink().leftoverLazy(() -> ModItems.SODA_CUP.get()).effect(MobEffects.DIG_SPEED, 600, 0),
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.2F).alwaysEdible().build()).stacksTo(16));
+    public static final DeferredItem<FoodItem> BERRY_SODA = ITEMS.registerItem("berry_soda",
+            props -> new FoodItem(props).drink().leftoverLazy(() -> ModItems.SODA_CUP.get()).effect(MobEffects.NIGHT_VISION, 1200, 0),
+            new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.2F).alwaysEdible().build()).stacksTo(16));
+
+    // ---- Block items ----
+    public static final DeferredItem<BlockItem> ICE_CREAM_MACHINE = ITEMS.registerSimpleBlockItem("ice_cream_machine", ModBlocks.ICE_CREAM_MACHINE);
+    public static final DeferredItem<BlockItem> SODA_MACHINE = ITEMS.registerSimpleBlockItem("soda_machine", ModBlocks.SODA_MACHINE);
+    public static final DeferredItem<BlockItem> DINER_TILE = ITEMS.registerSimpleBlockItem("diner_tile", ModBlocks.DINER_TILE);
+    public static final DeferredItem<BlockItem> DINER_COUNTER = ITEMS.registerSimpleBlockItem("diner_counter", ModBlocks.DINER_COUNTER);
+    public static final DeferredItem<BlockItem> DINER_STOOL = ITEMS.registerSimpleBlockItem("diner_stool", ModBlocks.DINER_STOOL);
+    public static final DeferredItem<BlockItem> DINER_BOOTH = ITEMS.registerSimpleBlockItem("diner_booth", ModBlocks.DINER_BOOTH);
+    public static final DeferredItem<BlockItem> NEON_SIGN = ITEMS.registerSimpleBlockItem("neon_sign", ModBlocks.NEON_SIGN);
 }

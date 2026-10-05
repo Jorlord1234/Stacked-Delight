@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "stacked_delight:block/diner_tile"
+    }
+  }
+}

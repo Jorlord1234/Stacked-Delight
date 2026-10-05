@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "RRR"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:quartz_slab"
+    },
+    "R": {
+      "item": "minecraft:red_terracotta"
+    }
+  },
+  "result": {
+    "id": "stacked_delight:diner_counter",
+    "count": 3
+  }
+}

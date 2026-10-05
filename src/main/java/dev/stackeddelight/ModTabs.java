@@ -25,6 +25,25 @@ public class ModTabs {
                         output.accept(ModItems.CHOCOLATE_MILKSHAKE.get());
                         output.accept(ModItems.SWEET_BERRY_MILKSHAKE.get());
                         output.accept(ModItems.COMBO_MEAL.get());
+                        output.accept(ModItems.RAW_SAUSAGE.get());
+                        output.accept(ModItems.SAUSAGE.get());
+                        output.accept(ModItems.HOT_DOG.get());
+                        output.accept(ModItems.WAFER_CONE.get());
+                        output.accept(ModItems.VANILLA_CONE.get());
+                        output.accept(ModItems.CHOCOLATE_CONE.get());
+                        output.accept(ModItems.STRAWBERRY_CONE.get());
+                        output.accept(ModItems.SODA_CUP.get());
+                        output.accept(ModItems.COLA.get());
+                        output.accept(ModItems.APPLE_SODA.get());
+                        output.accept(ModItems.MELON_SODA.get());
+                        output.accept(ModItems.BERRY_SODA.get());
+                        output.accept(ModItems.ICE_CREAM_MACHINE.get());
+                        output.accept(ModItems.SODA_MACHINE.get());
+                        output.accept(ModItems.DINER_TILE.get());
+                        output.accept(ModItems.DINER_COUNTER.get());
+                        output.accept(ModItems.DINER_STOOL.get());
+                        output.accept(ModItems.DINER_BOOTH.get());
+                        output.accept(ModItems.NEON_SIGN.get());
                     })
                     .build());
 }

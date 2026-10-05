@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "stacked_delight:ice_cream_machine",
+    "stacked_delight:soda_machine",
+    "stacked_delight:diner_tile",
+    "stacked_delight:diner_counter",
+    "stacked_delight:diner_stool",
+    "stacked_delight:diner_booth",
+    "stacked_delight:neon_sign"
+  ]
+}

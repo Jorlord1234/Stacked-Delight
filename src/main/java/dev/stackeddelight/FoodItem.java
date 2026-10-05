@@ -2,6 +2,7 @@ package dev.stackeddelight;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -24,7 +25,7 @@ public class FoodItem extends Item {
     private final List<FdEffect> farmersDelightEffects = new ArrayList<>();
     private final List<VanillaEffect> vanillaEffects = new ArrayList<>();
     private boolean drink = false;
-    private ItemLike leftover = null;
+    private Supplier<? extends ItemLike> leftover = null;
 
     public FoodItem(Properties properties) {
         super(properties);
@@ -49,6 +50,12 @@ public class FoodItem extends Item {
 
     /** Item you get back after eating (for example a Glass Bottle). */
     public FoodItem leftover(ItemLike item) {
+        this.leftover = () -> item;
+        return this;
+    }
+
+    /** Same, for an item of this mod that is registered later. */
+    public FoodItem leftoverLazy(Supplier<? extends ItemLike> item) {
         this.leftover = item;
         return this;
     }
@@ -72,7 +79,7 @@ public class FoodItem extends Item {
             }
         }
         if (leftover != null && !(entity instanceof Player p && p.getAbilities().instabuild)) {
-            ItemStack back = new ItemStack(leftover);
+            ItemStack back = new ItemStack(leftover.get());
             if (result.isEmpty()) {
                 return back;
             }

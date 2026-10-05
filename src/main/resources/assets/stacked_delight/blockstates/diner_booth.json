@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "stacked_delight:block/diner_booth"
+    },
+    "facing=east": {
+      "model": "stacked_delight:block/diner_booth",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "stacked_delight:block/diner_booth",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "stacked_delight:block/diner_booth",
+      "y": 270
+    }
+  }
+}
